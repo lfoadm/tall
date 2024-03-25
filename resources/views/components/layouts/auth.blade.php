@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="light">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>{{ $title ?? 'PixFun' }}</title>
+        <title>{{ $title ?? 'Login' }}</title>
         {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
         @vite('resources/css/app.css')
         @livewireStyles
     </head>
+
     <body x-data="{
         theme: localStorage.getItem('theme') ?? 'light',
         changeTheme() {
@@ -20,8 +22,14 @@
                 document.querySelector('html').setAttribute('data-theme', this.theme)
             },
     }">
-        <x-common.navbar />
-        {{ $slot }}
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+            <div>
+                <img src="{{ asset('images/logo.png') }}" class="w-full object-contain h-screen flex justify-center items-center" alt="auth_img" />
+            </div>
+            {{ $slot }}
+        </div>
+
         @livewireScripts
     </body>
 </html>
