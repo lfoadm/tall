@@ -21,6 +21,7 @@
             },
     }">
         <x-common.navbar />
+        <x-common.toast />
         {{ $slot }}
         @livewireScripts
     </body>

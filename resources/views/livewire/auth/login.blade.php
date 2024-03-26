@@ -11,7 +11,7 @@
             </div>
             <div class="mb-2">
                 <label for="email">E-mail</label>
-                <input type="text" placeholder="E-mail" class="input input-bordered w-full mt-1" wire:model='email' />
+                <input type="email" placeholder="E-mail" class="input input-bordered w-full mt-1" wire:model='email' />
                 @error('email')
                     <span class="text-red-500">{{ $message }}</span>
                 @enderror

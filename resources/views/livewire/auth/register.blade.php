@@ -35,7 +35,7 @@
             </div>
 
             <div class="mb-2">
-                <button class="btn btn-warning w-full">Entrar</button>
+                <button class="btn btn-warning w-full">Registrar</button>
             </div>
             <div class="text-center">
                 <p> -- --  --</p>
